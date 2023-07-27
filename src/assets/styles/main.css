@@ -18,3 +18,14 @@ body {
     padding: 0 8px;
     background-color: #eee;
 }
+
+.sliderMain {
+    height: 400px;
+    width: 100%;
+}
+
+.sliderMain {
+    height: 200px;
+    width: 100%;
+    background-color: #9b9b9b;
+}

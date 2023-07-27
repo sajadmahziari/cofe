@@ -1,7 +1,9 @@
+import Index from "./component/home/Index";
+
 const App = () => {
   return (
     <>
-      app test
+      <Index/>
     </>
   );
 }
