@@ -1,0 +1,7 @@
+@font-face {
+    font-family: fontName;
+    src: url(./../fonts/iransans/woff/IRANSansX-Medium.woff);
+}
+body{
+    font-family: fontName;
+}
