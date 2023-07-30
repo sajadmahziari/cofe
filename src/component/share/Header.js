@@ -3,8 +3,8 @@ import { CiShoppingBasket } from "react-icons/ci";
 const Header = () => {
     return ( 
         <div className="header">
-             <span><AiOutlineAlignRight/></span>
-             <span><CiShoppingBasket/></span>
+             <span className="menuIcon"><AiOutlineAlignRight/></span>
+             <span className="basketIcon"><CiShoppingBasket/></span>
         </div>
      );
 }

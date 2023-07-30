@@ -29,6 +29,9 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 0 8px;
+    position: sticky;
+    top: 0;
+    z-index: 5;
 }
 
 .backMiror {
@@ -135,4 +138,47 @@ body {
 
 svg {
     font-size: 20px;
+}
+
+
+.basketIcon svg {
+    font-size: 20px;
+    padding: 0.4rem;
+    background-color: #11111182;
+    color: #fff;
+    border-radius: 16px 10px 29px 14px;
+}
+
+.menuIcon svg {
+    font-size: 20px;
+    padding: 0.4rem;
+    background-color: #11111182;
+    color: #fff;
+    border-radius: 14px 29px 10px 16px;
+}
+
+.titleSlider {
+    width: 80%;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.offer {
+    color: #fff;
+    font-size: 10px;
+    background: #600;
+    border-radius: 50px;
+    padding: 0.2rem;
+  }
+
+.unitPrice {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mainPrice {
+    font-size: 10px;
 }
