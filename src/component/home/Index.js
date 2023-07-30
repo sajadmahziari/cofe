@@ -49,6 +49,10 @@ const Index = () => {
                     <span>پیتزا</span>
                 </div>
             </div>
+            {/* menu online */}
+            <div className='d-flex justify-content-center align-items-center'>
+                <button className='btnMenu'>مشاهده منو</button>
+            </div>
 
             {/* slider best lunch categury component */}
             <div className=" d-flex">
@@ -139,13 +143,14 @@ const Index = () => {
                                         <span className='mainPrice'>15,000 تومان</span>
                                         <span className='priceBest'>12,500 تومان</span>
                                     </div>
-                                    <span className='offer'>5%</span>
+                                    <span className='offer'>8%</span>
                                 </div>
                             </div>
                         </SwiperSlide>
+                       
                         <SwiperSlide className='d-flex flex-direction-col'>
                             <div className='backMiror'>
-                                <img className='imgBest' src={salad} />
+                                <img className='imgBest' src={vicky} />
                                 <div className='boxBottom'>
                                     <span className="nameBest">کیک</span>
                                     <span className='categuryBest'>دسته بندی</span>
@@ -159,7 +164,7 @@ const Index = () => {
                         </SwiperSlide>
                         <SwiperSlide className='d-flex flex-direction-col'>
                             <div className='backMiror'>
-                                <img className='imgBest' src={salad} />
+                                <img className='imgBest' src={salad2} />
                                 <div className='boxBottom'>
                                     <span className="nameBest">کیک</span>
                                     <span className='categuryBest'>دسته بندی</span>
@@ -167,7 +172,7 @@ const Index = () => {
                                         <span className='mainPrice'>15,000 تومان</span>
                                         <span className='priceBest'>12,500 تومان</span>
                                     </div>
-                                    <span className='offer'>5%</span>
+                                    <span className='offer'>15%</span>
                                 </div>
                             </div>
                         </SwiperSlide>
@@ -181,7 +186,7 @@ const Index = () => {
                                         <span className='mainPrice'>15,000 تومان</span>
                                         <span className='priceBest'>12,500 تومان</span>
                                     </div>
-                                    <span className='offer'>5%</span>
+                                    <span className='offer'>4%</span>
                                 </div>
                             </div>
                         </SwiperSlide>
@@ -190,6 +195,9 @@ const Index = () => {
                 </div>
             </div>
 
+
+
+ 
 
 
         </>

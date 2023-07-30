@@ -170,7 +170,7 @@ svg {
     background: #600;
     border-radius: 50px;
     padding: 0.2rem;
-  }
+}
 
 .unitPrice {
     display: flex;
@@ -181,4 +181,55 @@ svg {
 
 .mainPrice {
     font-size: 10px;
+    text-decoration: line-through;
+    text-decoration-color: red;
 }
+
+.btnMenu {
+    backdrop-filter: invert(5%);
+    background-color: transparent;
+    border: 1px solid #ccc;
+    width: 110px;
+    height: 110px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.backHead {
+    width: 100%;
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: 100%;
+    background-color: #fbd8d8;
+    z-index: 1;
+    filter: blur(18px);
+}
+
+.z-1 {
+    z-index: 7;
+}
+.circle{
+    position: relative;
+    width: 100px;
+    color: #414141;
+    font-size: 10px;
+}
+.circle::after {
+    content: '';
+    width: 8px;
+    aspect-ratio: 1;
+    background-color: #009700;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 35%;
+    border-radius: 10px;
+    animation: wink 1.7s linear infinite;
+  }
+  @keyframes wink {
+    0%{opacity: 0;}
+    50%{opacity: 0.5;}
+    100%{opacity: 0;}
+  }
