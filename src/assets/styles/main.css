@@ -8,6 +8,8 @@ body {
     margin: 0;
     padding: 0;
     direction: rtl;
+    background-image: url('./../images/background.jpg');
+    background-size: cover;
 }
 
 .header {
@@ -16,7 +18,6 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 0 8px;
-    background-color: #eee;
 }
 
 
@@ -33,7 +34,6 @@ body {
 .groupCategury {
     width: 100%;
     height: 250px;
-    background-color: #eee;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -41,42 +41,68 @@ body {
 }
 
 .itemCategury {
-    width: 25%;
+    width: 26%;
     aspect-ratio: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     border-radius: 8px;
-    border: 1px solid #ccc;
- }
- .sliderCategury img{
+    backdrop-filter: invert(5%);
+}
+
+.sliderCategury img {
     width: 100%;
- }
-.w-70{
+}
+
+.w-70 {
     width: 70%;
 }
 
-.w-30{
+.w-30 {
     width: 30%;
 }
-.d-flex{
+
+.d-flex {
     display: flex;
 }
-.align-items-center{
+
+.align-items-center {
     align-items: center;
 }
-.justify-content-center{
+
+.justify-content-center {
     justify-content: center;
 }
-.flex-direction-col{
+
+.flex-direction-col {
     flex-direction: column;
 }
- .sliderCategury .swiper-slide{
+
+.sliderCategury .swiper-slide {
     display: flex !important;
     justify-content: center;
     align-items: center;
- }
- .sliderCategury{
+}
+
+.sliderCategury {
     height: 150px;
- }
+}
+
+.nameBest {
+    color: #999;
+    font-size: 12px;
+}
+
+.categuryBest {
+    color: #999;
+    font-size: 10px;
+}
+
+.priceBest {
+    color: #08b308;
+    font-size: 10px;
+}
+svg{
+    font-size: 20px;
+}

@@ -1,9 +1,8 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import foodbanner from './../../assets/images/foodbanner.jpg'
-import cake from './../../assets/images/cack.jpg'
-import baget from './../../assets/images/baget.jpg'
-import makaroni from './../../assets/images/makaroni.jpg'
-import vicky from './../../assets/images/vicky.jpg'
+import salad from './../../assets/images/salad.png'
+import salad2 from './../../assets/images/salad2.png'
+import vicky from './../../assets/images/vicky.png'
 import 'swiper/css';
 import foodSvg from './../../assets/icon/food-svg.svg'
 import { BsFillCupHotFill, BsFillCupFill } from "react-icons/bs";
@@ -13,40 +12,40 @@ const Index = () => {
     return (
         <>
             {/* slider main component */}
-                <Swiper className='sliderMain'
-                    spaceBetween={10}
-                    slidesPerView={1}
-                    onSlideChange={() => console.log('slide change')}
-                    onSwiper={(swiper) => console.log(swiper)} >
-                    <SwiperSlide><img src={foodbanner} /></SwiperSlide>
-                    <SwiperSlide><img src={foodbanner} /></SwiperSlide>
-                    <SwiperSlide><img src={foodbanner} /></SwiperSlide>
-                </Swiper>
+            <Swiper className='sliderMain'
+                spaceBetween={10}
+                slidesPerView={1}
+                onSlideChange={() => console.log('slide change')}
+                onSwiper={(swiper) => console.log(swiper)} >
+                <SwiperSlide><img src={foodbanner} /></SwiperSlide>
+                <SwiperSlide><img src={foodbanner} /></SwiperSlide>
+                <SwiperSlide><img src={foodbanner} /></SwiperSlide>
+            </Swiper>
             {/* itemCategury */}
             <div className="groupCategury">
                 <div className="itemCategury">
                     <span><BsFillCupFill /></span>
-                    <span>text</span>
+                    <span>نوشیدنی سرد</span>
                 </div>
                 <div className="itemCategury">
                     <span><BsFillCupHotFill /></span>
-                    <span>text</span>
+                    <span>نوشیدی گرم</span>
                 </div>
                 <div className="itemCategury">
                     <span><BiCake /></span>
-                    <span>text</span>
+                    <span>کیک</span>
                 </div>
                 <div className="itemCategury">
                     <span><BiCake /></span>
-                    <span>text</span>
+                    <span>بستنی</span>
                 </div>
                 <div className="itemCategury">
                     <span><BsFillCupHotFill /></span>
-                    <span>text</span>
+                    <span>ساندویچ</span>
                 </div>
                 <div className="itemCategury">
                     <span><BsFillCupFill /></span>
-                    <span>text</span>
+                    <span>پیتزا</span>
                 </div>
 
 
@@ -56,35 +55,45 @@ const Index = () => {
             {/* slider categury component */}
             <div className=" d-flex">
                 <div className='w-30 d-flex align-items-center justify-content-center flex-direction-col'>
-                    <img src={foodSvg}/>
+                    <img src={foodSvg} />
                     <span>پر تقاضاها</span>
                 </div>
 
                 <div className='w-70'>
                     <Swiper className='sliderCategury'
                         spaceBetween={5}
-                        slidesPerView={4}
+                        slidesPerView={3}
                         onSlideChange={() => console.log('slide change')}
                         onSwiper={(swiper) => console.log(swiper)} >
                         <SwiperSlide className='d-flex flex-direction-col'>
-                            <img src={cake} />
-                            <span>کیک</span>
+                            <img className='imgBest' src={salad} />
+                            <span className="nameBest">کیک</span>
+                            <span className='categuryBest'>دسته بندی</span>
+                            <span className='priceBest'>15,000 تومان</span>
                         </SwiperSlide>
                         <SwiperSlide className='d-flex flex-direction-col'>
-                            <img src={baget} />
-                            <span>نان</span>
+                            <img className='imgBest' src={salad2} />
+                            <span className="nameBest">نان</span>
+                            <span className='categuryBest'>دسته بندی</span>
+                            <span className='priceBest'>15,000 تومان</span>
                         </SwiperSlide>
                         <SwiperSlide className='d-flex flex-direction-col'>
-                            <img src={makaroni} />
-                            <span>ماکارونی</span>
+                            <img className='imgBest' src={vicky} />
+                            <span className="nameBest">ماکارونی</span>
+                            <span className='categuryBest'>دسته بندی</span>
+                            <span className='priceBest'>15,000 تومان</span>
                         </SwiperSlide>
                         <SwiperSlide className='d-flex flex-direction-col'>
-                            <img src={vicky} />
-                            <span>غذا</span>
+                            <img className='imgBest' src={vicky} />
+                            <span className="nameBest">غذا</span>
+                            <span className='categuryBest'>دسته بندی</span>
+                            <span className='priceBest'>15,000 تومان</span>
                         </SwiperSlide>
                         <SwiperSlide className='d-flex flex-direction-col'>
-                            <img src={cake} />
-                            <span>کیک</span>
+                            <img className='imgBest' src={salad} />
+                            <span className="nameBest">کیک</span>
+                            <span className='categuryBest'>دسته بندی</span>
+                            <span className='priceBest'>15,000 تومان</span>
                         </SwiperSlide>
                     </Swiper>
                 </div>
