@@ -179,6 +179,15 @@ svg {
     flex-direction: column;
 }
 
+.storyImage {
+    width: 70px;
+    aspect-ratio: 1;
+    background: linear-gradient(to top, #d53a50 0%, #bdad56 100%);
+    border-radius: 100%;
+    box-sizing: border-box;
+    padding: 3px;
+}
+
 .mainPrice {
     font-size: 10px;
     text-decoration: line-through;
@@ -210,12 +219,14 @@ svg {
 .z-1 {
     z-index: 7;
 }
-.circle{
+
+.circle {
     position: relative;
     width: 100px;
     color: #414141;
     font-size: 10px;
 }
+
 .circle::after {
     content: '';
     width: 8px;
@@ -227,9 +238,18 @@ svg {
     top: 35%;
     border-radius: 10px;
     animation: wink 1.7s linear infinite;
-  }
-  @keyframes wink {
-    0%{opacity: 0;}
-    50%{opacity: 0.5;}
-    100%{opacity: 0;}
-  }
+}
+
+@keyframes wink {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
