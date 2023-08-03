@@ -68,6 +68,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
+    margin-top: 1rem;
 }
 
 .itemCategury {
@@ -292,7 +293,7 @@ svg {
     width: 80%;
     position: fixed;
     min-height: 50vh;
-    background-color: #ddd;
+    background-color: #ececec;
     right: 0;
     left: 0;
     margin: 0 auto;
@@ -323,7 +324,7 @@ svg {
 }
 
 .itemCateguryParent .imgCategury {
-    width: 80px;
+    width: 50px;
 }
 
 .itemCateguryParent .nameCategury {
@@ -361,4 +362,13 @@ svg {
     width: 35px;
   }.nameCategury {
     font-size: 13px;
+  }
+  .centerCenter {
+    position: fixed;
+    top: 25%;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    width: 100%;
+    z-index: 99;
   }

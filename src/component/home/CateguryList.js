@@ -1,41 +1,34 @@
 import coldDirink from './../../assets/icon/iconCategury/coldDirink.png'
-import hotDirink from './../../assets/icon/iconCategury/hotDirink.jpg'
+import hotDirink from './../../assets/icon/iconCategury/hotDirink.png'
 import coldSandwitch from './../../assets/icon/iconCategury/coldSandwitch.png'
-import hotSandwitch from './../../assets/icon/iconCategury/hotSandwitch.jpg'
+import hotSandwitch from './../../assets/icon/iconCategury/hotSandWitch.png'
 import pizza from './../../assets/icon/iconCategury/pizza.png'
 import Salad from './../../assets/icon/iconCategury/salad.png'
 import fried from './../../assets/icon/iconCategury/fried.png'
+import { useState } from 'react'
 const CateguryList = () => {
+    const [categury] = useState([
+        { name: "نوشیدنی سرد", img: coldDirink },
+        { name: "نوشیدنی گرم", img: hotDirink },
+        { name: "ساندویچ سرد", img: coldSandwitch },
+        { name: "ساندویچ گرم", img: hotSandwitch },
+        { name: "پیتزا", img: pizza },
+        { name: "سالاد", img: Salad },
+        { name: "سوخاری", img: fried },
+    ])
     return (
         <div className="groupCategury">
-            <div className="itemCategury">
-                <img className='imgCategury' src={coldDirink} />
-                <span className='nameCategury'>نوشیدنی سرد</span>
-            </div>
-            <div className="itemCategury">
-                <img className='imgCategury' src={hotDirink} />
-                <span className='nameCategury'>نوشیدی گرم</span>
-            </div>
-            <div className="itemCategury">
-                <img className='imgCategury' src={coldSandwitch} />
-                <span className='nameCategury'>ساندویچ سرد</span>
-            </div>
-            <div className="itemCategury">
-                <img className='imgCategury' src={hotSandwitch} />
-                <span className='nameCategury'>ساندویچ گرم</span>
-            </div>
-            <div className="itemCategury">
-                <img className='imgCategury' src={pizza} />
-                <span className='nameCategury'>پیتزا</span>
-            </div>
-            <div className="itemCategury">
-                <img className='imgCategury' src={Salad} />
-                <span className='nameCategury'>سالاد</span>
-            </div>
-            <div className="itemCategury">
-                <img className='imgCategury' src={fried} />
-                <span className='nameCategury'>سوخاری</span>
-            </div>
+            {categury.map((cat,index) => {
+                return (
+                    <div className="itemCategury" key={index}>
+                        <img className='imgCategury' src={cat.img} />
+                        <span className='nameCategury'>{cat.name}</span>
+                    </div>
+                )
+            })}
+
+
+
         </div>
     );
 }
