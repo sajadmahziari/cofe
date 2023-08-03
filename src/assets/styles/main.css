@@ -63,7 +63,7 @@ body {
 
 .groupCategury {
     width: 100%;
-    height: 250px;
+    height: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -76,9 +76,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     border-radius: 8px;
     backdrop-filter: invert(5%);
+    margin-bottom: 16px;
 }
 
 .sliderCategury img {
@@ -225,6 +226,7 @@ svg {
     width: 100px;
     color: #414141;
     font-size: 10px;
+    font-weight: bold;
 }
 
 .circle::after {
@@ -253,3 +255,110 @@ svg {
         opacity: 0;
     }
 }
+
+.menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50%;
+    background-color: #fff;
+    z-index: 7;
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-bottom-left-radius: 30px;
+}
+
+.menu li {
+    padding-right: 1rem;
+    font-size: 12px;
+}
+
+.popUp {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #00000073;
+    z-index: 7;
+}
+
+.categury {
+    width: 80%;
+    position: fixed;
+    min-height: 50vh;
+    background-color: #ddd;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    top: 25%;
+    z-index: 10;
+    box-shadow: inset 0 0 10px 20px #cecece;
+    border-radius: 8px;
+    padding: 1rem .5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-height: 45vh;
+    overflow: scroll;
+  
+}
+
+.itemCateguryParent {
+    width: 85px;
+    height: 95px;
+    box-shadow: inset 0 0 5px 5px #ccc;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 1.5rem;
+}
+
+.itemCateguryParent .imgCategury {
+    width: 80px;
+}
+
+.itemCateguryParent .nameCategury {
+    text-align: center;
+    width: 100%;
+    display: block;
+    font-size: 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000;
+}
+
+.txtNameMenu {
+    font-weight: bold;
+    padding-right: 1rem;
+}
+
+.menu li {
+    display: flex;
+    height: 50px;
+    border-bottom: 1px solid #ccc;
+    align-items: center;
+}
+.menu li:last-child {
+    border-bottom: unset;
+}
+
+.menu li a {
+    display: flex;
+    align-items: center;
+}
+.imgCategury {
+    width: 35px;
+  }.nameCategury {
+    font-size: 13px;
+  }
