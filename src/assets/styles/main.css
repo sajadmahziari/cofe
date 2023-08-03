@@ -81,6 +81,8 @@ body {
     border-radius: 8px;
     backdrop-filter: invert(5%);
     margin-bottom: 16px;
+    text-decoration: none;
+color: #151515;
 }
 
 .sliderCategury img {
@@ -287,6 +289,7 @@ svg {
     height: 100%;
     background: #00000073;
     z-index: 7;
+    backdrop-filter: blur(2px);
 }
 
 .categury {
