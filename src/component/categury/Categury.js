@@ -9,13 +9,13 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 const Categury = ({ closePopUp }) => {
     const [categury] = useState([
-        { name: "نوشیدنی سرد", img: coldDirink ,to:"coldDirink"},
-        { name: "نوشیدنی گرم", img: hotDirink ,to:"hotDirink"},
-        { name: "ساندویچ سرد", img: coldSandwitch ,to:"coldSandwitch"},
-        { name: "ساندویچ گرم", img: hotSandwitch ,to:"hotSandwitch"},
-        { name: "پیتزا", img: pizza ,to:"pizza"},
-        { name: "سالاد", img: Salad ,to:"Salad"},
-        { name: "سوخاری", img: fried ,to:"fried"},
+        { name: "نوشیدنی سرد", img: coldDirink ,id:1},
+        { name: "نوشیدنی گرم", img: hotDirink,id:2},
+        { name: "ساندویچ سرد", img: coldSandwitch ,id:3},
+        { name: "ساندویچ گرم", img: hotSandwitch ,id:4},
+        { name: "پیتزا", img: pizza ,id:5},
+        { name: "سالاد", img: Salad ,id:6},
+        { name: "سوخاری", img: fried ,id:7},
     ])
     return (
         <>
@@ -24,7 +24,7 @@ const Categury = ({ closePopUp }) => {
                 {
                     categury.map((cat) => {
                         return (
-                            <Link className="itemCateguryParent">
+                            <Link to={`product/categury/${cat.id}`} className="itemCateguryParent">
                                 <img className="imgCategury" src={cat.img} />
                                 <span className="nameCategury">{cat.name}</span>
                             </Link>

@@ -12,7 +12,7 @@ const Index = () => {
             <Story/>
             <MainSlider />
             <CateguryList />
-            <Menubtn/>
+            {/* <Menubtn/> */}
             <SliderTwo/>
         </>
     );

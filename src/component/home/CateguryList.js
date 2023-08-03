@@ -9,19 +9,23 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 const CateguryList = () => {
     const [categury] = useState([
-        { name: "نوشیدنی سرد", img: coldDirink ,to:"coldDirink"},
-        { name: "نوشیدنی گرم", img: hotDirink ,to:"hotDirink"},
-        { name: "ساندویچ سرد", img: coldSandwitch ,to:"coldSandwitch"},
-        { name: "ساندویچ گرم", img: hotSandwitch ,to:"hotSandwitch"},
-        { name: "پیتزا", img: pizza ,to:"pizza"},
-        { name: "سالاد", img: Salad ,to:"Salad"},
-        { name: "سوخاری", img: fried ,to:"fried"},
+        { name: "نوشیدنی سرد", img: coldDirink ,id:1},
+        { name: "نوشیدنی گرم", img: hotDirink ,id:2},
+        { name: "ساندویچ سرد", img: coldSandwitch ,id:3},
+        { name: "ساندویچ گرم", img: hotSandwitch ,id:4},
+        { name: "پیتزا", img: pizza ,id:5},
+        { name: "سالاد", img: Salad ,id:6},
+        { name: "سوخاری", img: fried ,id:7},
     ])
     return (
         <div className="groupCategury">
-            {categury.map((cat,index) => {
+            <div className='w-100 mb-1'>
+                <p className='w-100 text-center m-0'>دسته بندی ها</p>
+                <span className='lineShadow'></span>
+            </div>
+            {categury.map((cat, index) => {
                 return (
-                    <Link className="itemCategury" key={index}>
+                    <Link to={`product/categury/${cat.id}`} className="itemCategury" key={index}>
                         <img className='imgCategury' src={cat.img} />
                         <span className='nameCategury'>{cat.name}</span>
                     </Link>
