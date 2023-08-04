@@ -6,7 +6,6 @@ import pizza from './../../assets/icon/iconCategury/pizza.png'
 import Salad from './../../assets/icon/iconCategury/salad.png'
 import fried from './../../assets/icon/iconCategury/fried.png'
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 const Categury = ({ closePopUp }) => {
     const [categury] = useState([
         { name: "نوشیدنی سرد", img: coldDirink ,id:1},
@@ -17,22 +16,21 @@ const Categury = ({ closePopUp }) => {
         { name: "سالاد", img: Salad ,id:6},
         { name: "سوخاری", img: fried ,id:7},
     ])
+
     return (
         <>
             <span className="popUp" onClick={closePopUp}></span>
             <div className="categury">
                 {
-                    categury.map((cat) => {
+                    categury.map((cat,index) => {
                         return (
-                            <Link to={`product/categury/${cat.id}`} className="itemCateguryParent">
+                            <div key={index} className="itemCategury" onClick={()=>console.log('ads')}>
                                 <img className="imgCategury" src={cat.img} />
                                 <span className="nameCategury">{cat.name}</span>
-                            </Link>
+                            </div>
                         )
                     })
                 }
-
-
             </div>
         </>
     );

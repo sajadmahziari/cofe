@@ -138,7 +138,12 @@ body {
     justify-content: center;
     align-items: center;
 }
-
+.groupProducts {
+    position: fixed;
+    z-index: 9;
+    top: 16%;
+    color: #fff;
+  }
 .sliderCategury {
     height: 200px;
 }
@@ -307,20 +312,20 @@ svg {
     height: 100%;
     background: #00000073;
     z-index: 7;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(5px);
 }
 
 .categury {
     width: 80%;
     position: fixed;
-    min-height: 50vh;
-    background-color: #ececec;
+    min-height: 30vh;
+    /* background-color: #ececec; */
     right: 0;
     left: 0;
     margin: 0 auto;
     top: 25%;
     z-index: 10;
-    box-shadow: inset 0 0 10px 20px #cecece;
+    /* box-shadow: inset 0 0 10px 20px #cecece; */
     border-radius: 8px;
     padding: 1rem .5rem;
     display: flex;
@@ -329,19 +334,20 @@ svg {
     align-items: flex-start;
     max-height: 45vh;
     overflow: scroll;
-
+    background-image: url('./../images/background.jpg');
+    background-size: cover;
 }
 
 .itemCateguryParent {
-    width: 85px;
-    height: 95px;
-    box-shadow: inset 0 0 5px 5px #ccc;
-    border-radius: 8px;
+    width: 26%;
+    aspect-ratio: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    backdrop-filter: invert(5%);
+    margin-bottom: 16px;
     text-decoration: none;
     color: #151515;
 }
@@ -417,3 +423,107 @@ svg {
 .mb-1 {
     margin-bottom: 1rem;
 }
+.f-bold{
+    font-weight: bold;
+}
+
+
+.itemProduct {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 8px;
+    backdrop-filter: invert(5%);
+    margin-bottom: 16px;
+    text-decoration: none;
+    color: #151515;
+    height: 55px;
+    overflow: clip;
+}
+.imgProduct {
+    width: 50px;
+  }
+  .priceHeader {
+    font-size: 10px;
+    width: 80%;
+    text-align: left;
+    position: sticky;
+    top: -16px;
+    padding-left: 2.4rem;
+    background-color: red;
+    z-index: 99;
+  }
+
+  .PriceProduct {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+  }
+  .PriceProduct span:first-child{
+    color: green;
+  }
+  .nameProduct {
+    color: #151515;
+    font-size: 12px;
+  }
+/* about  */
+.aboutImg{
+    width: 95%;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+.textAbout{
+    font-size: 10px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 1rem;
+    font-weight: bold;
+    line-height: 25px;
+}
+.media {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #ffffff30;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 1rem;
+    padding: 1rem 0;
+    border-radius: 8px;
+  }
+  .media a {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .phonesbox {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ffffff30;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 8px;
+    height: 60px;
+    margin-top: 1rem;
+  }
+  .btnCallUs {
+    text-align: center;
+    text-decoration: none;
+    color: #151515;
+    border: 1px solid green;
+    padding: 0.2rem;
+    border-radius: 8px;
+    background-color: green;
+    color: #fff;
+    font-size: 10px;
+    width: 120px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+/* about  */
