@@ -6,6 +6,7 @@ import iceCofe from './../../assets/images/drinkCold/iceCofe.jpg';
 import iceMoka from './../../assets/images/drinkCold/iceMoka.jpg';
 import mohito from './../../assets/images/drinkCold/mohito.jpg';
 import orangeJuse from './../../assets/images/drinkCold/orangeJuse.jpeg';
+import { Link } from 'react-router-dom';
 
 const Products = ({ closePopUp }) => {
     const [categury] = useState([
@@ -26,11 +27,11 @@ const Products = ({ closePopUp }) => {
                 {
                     categury.map((cat, index) => {
                         return (
-                            <div key={index} className="itemProduct" onClick={() => console.log('ads')}>
+                            <Link to={`product/${cat.id}`} id={cat.id} key={index} className="itemProduct" onClick={() => console.log('ads')}>
                                 <img className="imgProduct" src={cat.img} />
                                 <span className="nameProduct">{cat.name}</span>
                                 <span className="PriceProduct"><span>{cat.price} </span><span>تومان</span></span>
-                            </div>
+                            </Link>
                         )
                     })
                 }
