@@ -7,7 +7,7 @@ import Salad from './../../assets/icon/iconCategury/salad.png'
 import fried from './../../assets/icon/iconCategury/fried.png'
 import { useState } from 'react'
 import Products from './Products'
-const Categury = ({ closePopUp }) => {
+const Categury = () => {
     const [categury] = useState([
         { name: "نوشیدنی سرد", img: coldDirink, id: 1 },
         { name: "نوشیدنی گرم", img: hotDirink, id: 2 },
@@ -27,8 +27,6 @@ const Categury = ({ closePopUp }) => {
     }
     return (
         <>
-            <span className="popUp" onClick={closePopUp}></span>
-    
             <div className="categury">
                 {
                     categury.map((cat, index) => {

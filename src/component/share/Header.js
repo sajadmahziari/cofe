@@ -22,7 +22,7 @@ const Header = () => {
                <span className="z-1 circle"> کافه باز است </span>
                <span className="basketIcon z-1"><CiShoppingBasket /></span>
                {show && <Menu clickCategury={clickCategury} closePopUp={() => setShow(false)} />}
-               {Categury && <Categurys closePopUp={closePopUp} />}
+               {Categury && <div className="boxCenter"><Categurys closePopUp={closePopUp} /><span className="popUp" onClick={closePopUp}></span></div>}
 
           </div>
      );
