@@ -21,14 +21,19 @@ const Categury = ({ closePopUp }) => {
     const closePopUps = () => {
         setProduct(false)
     }
+    const onClick=(id)=>{
+        setProduct(true)
+     
+    }
     return (
         <>
             <span className="popUp" onClick={closePopUp}></span>
+    
             <div className="categury">
                 {
                     categury.map((cat, index) => {
                         return (
-                            <div key={index} className="itemCategury" onClick={() => setProduct(true)}>
+                            <div key={index}  className="itemCategury" onClick={() => onClick(cat.id)}>
                                 <img className="imgCategury" src={cat.img} />
                                 <span className="nameCategury">{cat.name}</span>
                             </div>

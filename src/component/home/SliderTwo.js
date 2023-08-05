@@ -41,9 +41,9 @@ const SliderTwo = () => {
                         slidesPerView={3}
                         onSlideChange={() => console.log('slide change')}
                         onSwiper={(swiper) => console.log(swiper)} >
-                        {bestFood.map((cat) => {
+                        {bestFood.map((cat,index) => {
                             return (
-                                <SwiperSlide className='d-flex flex-direction-col'>
+                                <SwiperSlide className='d-flex flex-direction-col' key={index}>
                                     <div className='backMiror'>
                                         <img className='imgBest' src={cat.img} />
                                         <div className='boxBottom'>
@@ -71,9 +71,9 @@ const SliderTwo = () => {
                         onSwiper={(swiper) => console.log(swiper)} >
                     
 
-                        {offers.map((cat) => {
+                        {offers.map((cat,index) => {
                             return (
-                                <SwiperSlide className='d-flex flex-direction-col'>
+                                <SwiperSlide className='d-flex flex-direction-col' key={index}>
                                 <div className='backMiror'>
                                     <img className='imgBest' src={cat.img} />
                                     <div className='boxBottom'>

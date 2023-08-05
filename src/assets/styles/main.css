@@ -330,9 +330,11 @@ svg {
     z-index: 7;
     backdrop-filter: blur(5px);
 }
-
+.borderOpration{
+    border: 1px solid #ccc;
+}
 .categury {
-    width: 80%;
+    width: 90%;
     position: fixed;
     min-height: 30vh;
     /* background-color: #ececec; */
