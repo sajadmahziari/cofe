@@ -362,8 +362,8 @@ svg {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: flex-start;
-    max-height: 45vh;
-    overflow: scroll;
+    /* max-height: 45vh; */
+    /* overflow: scroll; */
     /* background-image: url('./../images/background.jpg'); */
     background-size: cover;
 }
@@ -376,24 +376,19 @@ svg {
 
 .categury {
     width: 90%;
-    /* position: fixed; */
     min-height: 30vh;
-    /* background-color: #ececec; */
     right: 0;
     left: 0;
     margin: 0 auto;
     top: 25%;
-    /* z-index: 10; */
-    /* box-shadow: inset 0 0 10px 20px #cecece; */
     border-radius: 8px;
     padding: 1rem .5rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: flex-start;
-    max-height: 45vh;
+    max-height: 50vh;
     overflow: scroll;
-    /* background-image: url('./../images/background.jpg'); */
     background-size: cover;
 }
 
@@ -566,8 +561,8 @@ svg {
 .boxOperation {
     display: flex;
     justify-content: space-between;
-    width: 130px;
-    height: 40px;
+    width: 80px;
+    height: 30px;
     align-items: center;
     backdrop-filter: invert(8%);
     border-radius: 8px;
