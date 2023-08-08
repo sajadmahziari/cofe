@@ -78,7 +78,7 @@ const Products = ({ closePopUp }) => {
                         categury.map((cat, index) => {
                             return (
                                 <div id={cat.id} key={index} className="itemProduct" onClick={() => console.log('ads')}>
-                                    <Link to={`product/${cat.id}`} className='w-60 box-right text-decoration-none'>
+                                    <Link to={`product/${cat.id}`} className='w-60 box-right text-decoration-none' onClick={closePopUp}>
                                         <span className="nameProduct">{cat.name}</span>
                                         <span className="nameProduct">{cat.name}</span>
                                         <span className="PriceProduct"><span>{cat.price} </span><span>تومان</span></span>
