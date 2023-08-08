@@ -70,9 +70,11 @@ body {
     align-items: center;
     margin-top: 1.5rem;
 }
-.groupCategury .categury{
+
+.groupCategury .categury {
     padding-top: 0;
 }
+
 .itemCategury {
     width: 26%;
     aspect-ratio: 1;
@@ -248,6 +250,7 @@ svg {
     font-size: 10px;
     text-decoration: line-through;
     text-decoration-color: red;
+    color: red;
 }
 
 .btnMenu {
@@ -540,6 +543,19 @@ svg {
 
 .PriceProduct span:first-child {
     color: green;
+}
+
+.detaileProduct {
+    font-size: 10px;
+    color: #717171;
+    width: 80%;
+}
+
+.productPrice {
+    color: green;
+    font-weight: bold;
+    border-bottom: 1px solid green;
+    padding-bottom: 8px;
 }
 
 .nameProduct {

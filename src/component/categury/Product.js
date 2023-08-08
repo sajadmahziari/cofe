@@ -37,10 +37,10 @@ const Product = () => {
             <div className='productOrder'>
                 <img className='productImage' src={state.img} />
                 <div className='d-flex justify-content-between productName  mt-1 w-95 mb-1'>
-                    <span className='f-bold'>{state.name}</span>
+                    <span className='f-bold nameProduct'>{state.name}</span>
                     <span>star</span>
                 </div>
-                <span className='text-right w-95'>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و </span>
+                <span className='text-right w-95 detaileProduct'>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و </span>
                 <div className=' groupBuy mt-1'>
                     <div className='productPrice'>
                         <span> قیمت: </span>
