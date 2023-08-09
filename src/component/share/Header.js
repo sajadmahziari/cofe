@@ -11,6 +11,7 @@ const Header = () => {
      const [popUpMenu, setPopUpMenu] = useState(false);
      const [popUpCategury, setPopUpCategury] = useState(false);
      const [popUpProduct, setPopUpProduct] = useState(false);
+
      const showCategury = () => {
           setPopUpMenu(false)
           setPopUpCategury(true)
@@ -19,6 +20,10 @@ const Header = () => {
           setPopUpCategury(false)
           setPopUpProduct(true)
           console.log(id)
+     }
+     const closeCategury = () => {
+          setPopUpCategury(false)
+          setPopUpProduct(true)
      }
      return (
           <div className="header">
@@ -43,21 +48,22 @@ const Header = () => {
                     <>
                          <span onClick={() => setPopUpCategury(false)} className="popUp "> </span>
                          <span className="d-flex justify-content-center align-items-center centerCenter">
-                              <CateguryList nameClass="openCatPopUp" colorTitle="titleCategury" />
+                              <CateguryList closeCategury={closeCategury} nameClass="openCatPopUp" colorTitle="titleCategury" />
                          </span>
                     </>
                }
                {/* showPopUp categury */}
-               {/* {
+               {
                     popUpProduct
                     &&
                     <>
-                         <span className="popUp" onClick={() => setPopUpProduct(false)}></span>
-                         <Products closePopUp={() => setPopUpProduct(false)} />
+                         <span onClick={() => setPopUpProduct(false)} className="popUp "> </span>
+                         <span className="d-flex justify-content-center align-items-center centerCenter">
+                              <Products closePopUp={() => setPopUpProduct(false)}/>
+                         </span>
                     </>
-               } */}
-               {/* showPopUp product */}
-
+               }
+                {/* showPopUp Products */}
           </div>
      );
 }

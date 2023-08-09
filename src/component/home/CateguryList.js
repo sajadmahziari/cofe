@@ -8,7 +8,7 @@ import fried from './../../assets/icon/iconCategury/fried.png'
 import { useState } from 'react'
 import Categury from '../categury/Categury'
 import Products from '../categury/Products'
-const CateguryList = ({ nameClass, colorTitle }) => {
+const CateguryList = ({ nameClass, colorTitle ,closeCategury}) => {
     const [categury] = useState([
         { name: "نوشیدنی سرد", img: coldDirink, id: 1 },
         { name: "نوشیدنی گرم", img: hotDirink, id: 2 },
@@ -21,8 +21,9 @@ const CateguryList = ({ nameClass, colorTitle }) => {
     const [popUpProduct, setPopUpProduct] = useState(false);
    
     const clickCategury =(id)=>{
-        setPopUpProduct(true)
-    }
+        setPopUpProduct(true);
+        closeCategury(id)
+     }
     return (
         <>
 
