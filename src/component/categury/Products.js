@@ -69,7 +69,7 @@ const Products = ({ closePopUp }) => {
 
     return (
         <>
-            <span className="popUp" onClick={closePopUp}></span>
+            
             <p className='groupProducts'>نوشیدنی سرد</p>
             <div className='boxCenter'>
 

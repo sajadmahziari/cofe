@@ -1,28 +1,62 @@
+
+
 import { useState } from "react";
 import { AiOutlineAlignRight } from "react-icons/ai";
 import { CiShoppingBasket } from "react-icons/ci";
 import Menu from "../menu/Menu";
-import Categurys from '../categury/Categury'
-
+import CateguryList from './../home/CateguryList';
+import Products from "../categury/Products";
 const Header = () => {
-     const [show, setShow] = useState(false);
-     const [Categury, setCategury] = useState(false);
-     const clickCategury = () => {
-          setCategury(true)
-          setShow(false)
+
+     const [popUpMenu, setPopUpMenu] = useState(false);
+     const [popUpCategury, setPopUpCategury] = useState(false);
+     const [popUpProduct, setPopUpProduct] = useState(false);
+     const showCategury = () => {
+          setPopUpMenu(false)
+          setPopUpCategury(true)
      }
-     const closePopUp=()=>{
-          setCategury(false)
-          
+     const clickCategury = (id) => {
+          setPopUpCategury(false)
+          setPopUpProduct(true)
+          console.log(id)
      }
      return (
           <div className="header">
                <span className="backHead"></span>
-               <span className="menuIcon z-1" onClick={() => setShow(!show)}><AiOutlineAlignRight /></span>
+               {/* background shadow */}
+               <span className="menuIcon z-1" onClick={() => setPopUpMenu(true)}><AiOutlineAlignRight /></span>
+               {/* icon menu */}
                <span className="z-1 circle"> کافه باز است </span>
                <span className="basketIcon z-1"><CiShoppingBasket /></span>
-               {show && <Menu clickCategury={clickCategury} closePopUp={() => setShow(false)} />}
-               {Categury && <div className="boxCenter"><Categurys closePopUp={closePopUp} /><span className="popUp" onClick={closePopUp}></span></div>}
+               {/* status cofe */}
+               {
+                    popUpMenu
+                    &&
+                    <>
+                         <span onClick={() => setPopUpMenu(false)} className="popUp"></span>
+                         <Menu onClickCat={showCategury} closePopUpMenu={() => setPopUpMenu(false)} />
+                    </>
+               }
+               {/* showPopUp menu */}
+               {popUpCategury
+                    &&
+                    <>
+                         <span onClick={() => setPopUpCategury(false)} className="popUp "> </span>
+                         <span className="d-flex justify-content-center align-items-center centerCenter">
+                              <CateguryList nameClass="openCatPopUp" colorTitle="titleCategury" />
+                         </span>
+                    </>
+               }
+               {/* showPopUp categury */}
+               {/* {
+                    popUpProduct
+                    &&
+                    <>
+                         <span className="popUp" onClick={() => setPopUpProduct(false)}></span>
+                         <Products closePopUp={() => setPopUpProduct(false)} />
+                    </>
+               } */}
+               {/* showPopUp product */}
 
           </div>
      );

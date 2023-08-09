@@ -331,9 +331,17 @@ svg {
     border-bottom-left-radius: 30px;
 }
 
+.titleCategury {
+    color: #fff;
+}
+
 .menu li {
     padding-right: 1rem;
     font-size: 12px;
+}
+
+.openCatPopUp {
+    background-image: url('./../images/background.jpg');
 }
 
 .popUp {
