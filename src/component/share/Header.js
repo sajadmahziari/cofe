@@ -6,6 +6,7 @@ import { CiShoppingBasket } from "react-icons/ci";
 import Menu from "../menu/Menu";
 import CateguryList from './../home/CateguryList';
 import Products from "../categury/Products";
+import { Link } from "react-router-dom";
 const Header = () => {
 
      const [popUpMenu, setPopUpMenu] = useState(false);
@@ -28,7 +29,7 @@ const Header = () => {
                <span className="menuIcon z-1" onClick={() => setPopUpMenu(true)}><AiOutlineAlignRight /></span>
                {/* icon menu */}
                <span className="z-1 circle"> کافه باز است </span>
-               <span className="basketIcon z-1"><CiShoppingBasket /></span>
+               <Link to="/order" className="basketIcon z-1"><CiShoppingBasket /></Link>
                {/* status cofe */}
                {
                     popUpMenu

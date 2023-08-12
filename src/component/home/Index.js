@@ -7,11 +7,14 @@ import Menubtn from './MenuBtn';
 import SliderTwo from './SliderTwo';
 import Story from './Story';
 const Index = () => {
+    const closeCategury=(id)=>{
+        // console.log (id)
+    }
     return (
         <>
             <Story/>
             <MainSlider />
-            <CateguryList />
+            <CateguryList closeCategury={()=>closeCategury()} />
             {/* <Menubtn/> */}
             <SliderTwo/>
         </>
