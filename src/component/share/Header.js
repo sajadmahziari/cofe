@@ -16,11 +16,7 @@ const Header = () => {
           setPopUpMenu(false)
           setPopUpCategury(true)
      }
-     const clickCategury = (id) => {
-          setPopUpCategury(false)
-          setPopUpProduct(true)
-          console.log(id)
-     }
+ 
      const closeCategury = () => {
           setPopUpCategury(false)
           setPopUpProduct(true)

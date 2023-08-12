@@ -10,8 +10,6 @@ import { BiTrash } from "react-icons/bi";
 import { Link } from 'react-router-dom';
 
 const Products = ({ closePopUp }) => {
-    const [counter, setCounter] = useState(0)
-    const [showBoxOp, setShowBoxOp] = useState(false)
     const [categury, setCategury] = useState([
         { showBox: false, quantity: 0, price: 1000, name: "چایی سرد", img: IceTee, id: 1 },
         { showBox: false, quantity: 0, price: 1000, name: "اب سیب", img: appleJuse, id: 2 },
@@ -56,16 +54,6 @@ const Products = ({ closePopUp }) => {
         add[index] = select;
         setCategury(add)
     }
-    // const ziruCount = (id) => {
-
-    //     const index = categury.findIndex((p) => p.id == id);
-    //     // const select = { ...categury[index] }
-    //     // select.quantity==0;
-    //     // const add = [...categury]
-    //     // add[index] = select;
-    //     // setCategury(add)
-    //     console.log(index)
-    // }
 
     return (
         <>
@@ -87,7 +75,6 @@ const Products = ({ closePopUp }) => {
                                     <div className='w-40 box-left'>
                                         <img className="imgProduct" src={cat.img} />
                                         {cat.quantity==0&&<div className='addItemBasket' onClick={() => addProduct(cat.id)}>افزودن </div>}
-                                        {/* {!cat.showBox && } */}
                                         {cat.quantity>0&& <div className='boxOperation borderOpration '>
                                             <div className='w-30 text-center' onClick={() => addquantity(cat.id)}>+</div>
                                             <div className='w-30 text-center borderRl'>{cat.quantity}</div>
