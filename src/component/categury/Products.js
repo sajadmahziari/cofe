@@ -8,7 +8,7 @@ import mohito from './../../assets/images/drinkCold/mohito.jpg';
 import orangeJuse from './../../assets/images/drinkCold/orangeJuse.jpeg';
 import { BiTrash } from "react-icons/bi";
 import { Link } from 'react-router-dom';
-
+import {AiFillStar} from "react-icons/ai";
 const Products = ({ closePopUp }) => {
     const [categury, setCategury] = useState([
         { showBox: false, quantity: 0, price: 1000, name: "چایی سرد", img: IceTee, id: 1 },
@@ -58,27 +58,31 @@ const Products = ({ closePopUp }) => {
     return (
         <>
             
-            <p className='groupProducts'>نوشیدنی سرد</p>
             <div className='boxCenter'>
+            <p className='groupProducts'>نوشیدنی سرد</p>
 
                 <div className="categury">
                     {
                         categury.map((cat, index) => {
                             return (
                                 <div id={cat.id} key={index} className="itemProduct" onClick={() => console.log('ads')}>
-                                    <Link to={`product/${cat.id}`} className='w-60 box-right text-decoration-none' onClick={closePopUp}>
-                                        <span className="nameProduct">{cat.name}</span>
+                                    <img className="imgProduct w-25" src={cat.img} />
+
+                                    <Link to={`product/${cat.id}`} className='w-50 box-right text-decoration-none' onClick={closePopUp}>
                                         <span className="nameProduct">{cat.name}</span>
                                         <span className="PriceProduct"><span>{cat.price} </span><span>تومان</span></span>
+                                        <span className='w-25 d-flex w-15 justify-content-between align-items-center'>
+                                            <span className='starRate'>4</span>
+                                            <AiFillStar className='starRate'/>
+                                        </span>
                                     </Link>
 
-                                    <div className='w-40 box-left'>
-                                        <img className="imgProduct" src={cat.img} />
-                                        {cat.quantity==0&&<div className='addItemBasket' onClick={() => addProduct(cat.id)}>افزودن </div>}
-                                        {cat.quantity>0&& <div className='boxOperation borderOpration '>
-                                            <div className='w-30 text-center' onClick={() => addquantity(cat.id)}>+</div>
-                                            <div className='w-30 text-center borderRl'>{cat.quantity}</div>
-                                            <div className='w-30 text-center' onClick={() => removeQuantity(cat.id)}>{cat.quantity === 1 ? <BiTrash /> : "-"}</div>
+                                    <div className='w-25 box-left'>
+                                        {cat.quantity==0&&<div className='addItemBasket ml-1' onClick={() => addProduct(cat.id)}>افزودن </div>}
+                                        {cat.quantity>0&& <div className='boxOperation'>
+                                            <div className='text-center addBtn' onClick={() => addquantity(cat.id)}>+</div>
+                                            <div className='text-center'>{cat.quantity}</div>
+                                            <div className='text-center minBtn' onClick={() => removeQuantity(cat.id)}>{cat.quantity === 1 ? <BiTrash /> : "-"}</div>
                                         </div>}
                                     </div>
 

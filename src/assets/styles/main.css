@@ -491,6 +491,10 @@ svg {
     margin-bottom: 1rem;
 }
 
+.w-30 {
+    width: 30%;
+}
+
 .f-bold {
     font-weight: bold;
 }
@@ -507,12 +511,11 @@ svg {
     margin-bottom: 16px;
     text-decoration: none;
     color: #151515;
-    height: 150px;
+    height: 85px;
     overflow: clip;
 }
 
 .imgProduct {
-    width: 80px;
     height: 80px;
     object-fit: cover;
 }
@@ -545,13 +548,20 @@ svg {
     padding-right: 1rem;
 }
 
-.PriceProduct {
-    font-size: 12px;
+.w-15 {
+    width: 15%;
 }
 
-.PriceProduct span:first-child {
-    color: green;
+.PriceProduct {
+    font-size: 10px;
+    color: #595959;
 }
+
+.starRate {
+    font-size: 12px;
+    color: #888;
+}
+
 
 .detaileProduct {
     font-size: 10px;
@@ -586,15 +596,32 @@ svg {
 
 .boxOperation {
     display: flex;
-    justify-content: space-between;
-    width: 80px;
-    height: 30px;
+    justify-content: center;
+    width: 30px;
+    height: 80px;
     align-items: center;
     backdrop-filter: invert(8%);
     border-radius: 8px;
     padding: 0 8px;
+    flex-direction: column;
 }
+.addBtn{
+    color: #169b16;
+    border: 1px solid #959595;
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+    line-height: 28px;
+}
+.minBtn{
+    color: #cb4040;
+    border: 1px solid #959595;
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+    line-height: 28px;
 
+}
 .groupBuy {
     display: flex;
     width: 95%;
@@ -637,11 +664,13 @@ svg {
 .box-left {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: end;
     justify-content: space-around;
     height: 100%;
 }
-
+.ml-1{
+    margin-left: 1rem;
+}
 .textAbout {
     font-size: 10px;
     width: 90%;
