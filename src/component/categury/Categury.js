@@ -1,10 +1,10 @@
-const Categury = ({img,name ,onClick}) => {
+const Categury = ({ image, category, onClick }) => {
     return (
         <>
-                <div className="itemCategury" onClick={onClick}>
-                    <img className="imgCategury" src={img} />
-                    <span className="nameCategury">{name}</span>
-                </div>
+            <div className="itemCategury" onClick={onClick}>
+                <img className="imageCategury" src={image} />
+                <span className="nameCategury">{category}</span>
+            </div>
         </>
     );
 }
