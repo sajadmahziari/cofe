@@ -1,17 +1,9 @@
 import { useState,useEffect } from 'react';
 import Categury from '../categury/Categury';
 import Products from '../categury/Products';
-import axios from 'axios';
-const CateguryList = ({ nameClass, colorTitle, closeCategury }) => {
+const CateguryList = ({ nameClass, colorTitle, closeCategury,categury }) => {
     // start get data categury main
-    const [categury, setCategury] = useState([])
-    useEffect(() => {
-        axios.get("https://fakestoreapi.com/products")
-            .then((res) => {
-                setCategury(res.data)
-            })
-            .catch(error => console.log(error));
-    }, [])
+  
     // end get data categury main
 
     const [popUpProduct, setPopUpProduct] = useState(false);
@@ -29,7 +21,7 @@ const CateguryList = ({ nameClass, colorTitle, closeCategury }) => {
                 </div>
                 <div className={`categury ${nameClass}`}>
                     {categury.map((cat) => {
-                        return <Categury key={cat.id} image={cat.image} category={cat.category} onClick={() => clickCategury(cat.id)} />
+                        return <Categury key={cat.id} image={cat.image} title={cat.title} onClick={() => clickCategury(cat.id)} />
                     })}
                 </div>
             </div>

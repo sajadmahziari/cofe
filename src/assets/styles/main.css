@@ -95,7 +95,7 @@ body {
     position: absolute;
     top: -30px;
     height: 80px;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .w-25 {
@@ -465,6 +465,7 @@ svg {
 
 .nameCategury {
     font-size: 13px;
+    text-align: center;
 }
 
 .centerCenter {
