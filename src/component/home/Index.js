@@ -10,7 +10,6 @@ const Index = () => {
     // story component start
     const [imageStory, setImageStory] = useState([])
     const [slider, setSlider] = useState([])
-    const [categury, setCategury] = useState([])
     const [sliderOffer, setSliderOffer] = useState([])
 
 
@@ -24,11 +23,6 @@ const Index = () => {
             .then((res) => {
                 setSlider(res.data)
             })
-            .catch(error => console.log(error) + "category");
-        axios.get("http://panel.saadcoffee.ir/api/categories?token=QSBiJF6Rk%26F5%262yLk1%qz^2*Up")
-            .then((res) => {
-                setCategury(res.data)
-            })
             .catch(error => console.log(error + "category"));
         axios.get("http://panel.saadcoffee.ir/api/discount?token=QSBiJF6Rk%26F5%262yLk1%qz^2*Up")
             .then((res) => {
@@ -41,7 +35,7 @@ const Index = () => {
         <>
             <Story imageStory={imageStory} />
             <MainSlider slider={slider} />
-            <CateguryList categury={categury} />
+            <CateguryList  />
             {/* <Menubtn/> */}
             <SliderTwo sliderOffer={sliderOffer} />
         </>

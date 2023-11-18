@@ -72,9 +72,6 @@ body {
     margin-top: 1.5rem;
 }
 
-.groupCategury .categury {
-    padding-top: 0;
-}
 
 .itemCategury {
     width: 26%;
@@ -90,6 +87,10 @@ body {
     color: #151515;
 }
 
+.categury.openCatPopUp {
+    aspect-ratio: 1;
+    overflow: auto;
+  }
 .sliderCategury img {
     width: 80px;
     position: absolute;

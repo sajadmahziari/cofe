@@ -1,17 +1,28 @@
-import { useState,useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Categury from '../categury/Categury';
 import Products from '../categury/Products';
-const CateguryList = ({ nameClass, colorTitle, closeCategury,categury }) => {
+import axios from 'axios';
+
+const CateguryList = ({ nameClass, colorTitle, closeCategury }) => {
     // start get data categury main
-  
+
     // end get data categury main
 
     const [popUpProduct, setPopUpProduct] = useState(false);
+    const [categury, setCategury] = useState([])
 
     const clickCategury = (id) => {
         setPopUpProduct(true);
         closeCategury(id)
     }
+
+    useEffect(() => {
+        axios.get("http://panel.saadcoffee.ir/api/categories?token=QSBiJF6Rk%26F5%262yLk1%qz^2*Up")
+            .then((res) => {
+                setCategury(res.data)
+            })
+            .catch(error => console.log(error));
+    }, [])
     return (
         <>
             <div className="groupCategury">
