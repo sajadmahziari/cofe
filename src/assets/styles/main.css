@@ -522,8 +522,10 @@ svg {
 }
 
 .imgProduct {
-    height: 80px;
+    width: 66px;
     object-fit: cover;
+    aspect-ratio: 1;
+    padding-right: .5rem;
 }
 
 .addItemBasket {
@@ -538,7 +540,12 @@ svg {
     background-color: #00800024;
     font-weight: bold;
 }
-
+.pl-1{
+    padding-left: 1rem;
+}
+.pl-2{
+    padding-left: 2rem;
+}
 .priceHeader {
     font-size: 10px;
     width: 80%;
