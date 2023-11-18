@@ -16,9 +16,7 @@ const Story = ({imageStory}) => {
             {show&&<div><span className='popUp' onClick={closePopUp}></span><img className='centerCenter' src={`${story.image}`}/></div>}
             <Swiper className='sliderStory'
                 spaceBetween={5}
-                slidesPerView={5}
-                onSlideChange={() => console.log('slide change')}
-                onSwiper={(swiper) => console.log(swiper)} >
+                slidesPerView={5}>
                 {
                     imageStory.map((st, index) => {
                         return (
