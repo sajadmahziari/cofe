@@ -577,21 +577,33 @@ svg {
 
 
 .detaileProduct {
-    font-size: 10px;
+    font-size: 12px;
     color: #717171;
     width: 80%;
 }
 
 .productPrice {
-    color: green;
     font-weight: bold;
-    border-bottom: 1px solid green;
-    padding-bottom: 8px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #11111182;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;  
 }
-
+.add-product-white{
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 5px 25px;
+    border-radius: 8px;
+    font-size: 13px;
+}
 .nameProduct {
     color: #151515;
-    font-size: 12px;
+    font-size: 13px;
 }
 
 .productImage {
