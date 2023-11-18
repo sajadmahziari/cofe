@@ -74,6 +74,8 @@ const Products = ({ closePopUp }) => {
                                             <span className='w-25 d-flex w-15 justify-content-between align-items-center'>
                                                 <span className='starRate'>4</span>
                                                 <AiFillStar className='starRate' />
+                                                  
+
                                             </span>
                                         </div>
                                     </Link>

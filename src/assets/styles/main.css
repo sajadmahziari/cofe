@@ -34,6 +34,55 @@ body {
     z-index: 5;
 }
 
+.categores-name-menu {
+    width: 100%;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    background-color: #11111182;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.justify-content-around {
+    justify-content: space-around;
+}
+.content-title {
+    color: #151515;
+  }
+.products-menu {
+    width: 95%;
+    border: 1px solid #11111182;
+    height: 80px;
+    margin-bottom: .3rem;
+    position: relative;
+    border-radius: 5px;
+}
+
+.content-image-product img {
+    width: 80px;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+.content-detaile-product {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: end;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+.content-btn-buy button{
+    width: 50px;
+    height: 25px;
+    background-color: transparent;
+    border: 2px solid #9d9d9d;
+    border-radius: 5px;
+}
 .backMiror {
     position: relative;
     background-color: #ffffff5c;
@@ -90,7 +139,8 @@ body {
 .categury.openCatPopUp {
     aspect-ratio: 1;
     overflow: auto;
-  }
+}
+
 .sliderCategury img {
     width: 80px;
     position: absolute;
@@ -247,9 +297,11 @@ svg {
     box-sizing: border-box;
     padding: 3px;
 }
-.sliderStory{
+
+.sliderStory {
     height: 80px;
 }
+
 .mainPrice {
     font-size: 10px;
     text-decoration: line-through;
@@ -540,12 +592,15 @@ svg {
     background-color: #00800024;
     font-weight: bold;
 }
-.pl-1{
+
+.pl-1 {
     padding-left: 1rem;
 }
-.pl-2{
+
+.pl-2 {
     padding-left: 2rem;
 }
+
 .priceHeader {
     font-size: 10px;
     width: 80%;
@@ -592,15 +647,17 @@ svg {
     color: #fff;
     display: flex;
     justify-content: space-around;
-    align-items: center;  
+    align-items: center;
 }
-.add-product-white{
+
+.add-product-white {
     color: #fff;
     border: 2px solid #fff;
     padding: 5px 25px;
     border-radius: 8px;
     font-size: 13px;
 }
+
 .nameProduct {
     color: #151515;
     font-size: 13px;
@@ -630,7 +687,8 @@ svg {
     padding: 0 8px;
     flex-direction: column;
 }
-.addBtn{
+
+.addBtn {
     color: #169b16;
     border: 1px solid #959595;
     width: 25px;
@@ -638,7 +696,8 @@ svg {
     border-radius: 50px;
     line-height: 28px;
 }
-.minBtn{
+
+.minBtn {
     color: #cb4040;
     border: 1px solid #959595;
     width: 25px;
@@ -647,6 +706,7 @@ svg {
     line-height: 28px;
 
 }
+
 .groupBuy {
     display: flex;
     width: 95%;
@@ -685,9 +745,11 @@ svg {
     height: 100%;
     padding-right: 8px;
 }
-.flex-row{
+
+.flex-row {
     flex-direction: row !important;
 }
+
 .box-left {
     display: flex;
     flex-direction: column;
@@ -695,7 +757,8 @@ svg {
     justify-content: space-around;
     height: 100%;
 }
-.addProduct{
+
+.addProduct {
     font-size: 10px;
     width: 80px;
     text-align: center;
@@ -707,9 +770,11 @@ svg {
     background-color: #00800024;
     font-weight: bold;
 }
-.ml-1{
+
+.ml-1 {
     margin-left: 1rem;
 }
+
 .textAbout {
     font-size: 10px;
     width: 90%;

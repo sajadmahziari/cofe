@@ -14,7 +14,7 @@ const Index = () => {
 
 
     useEffect(() => {
-        axios.get("https://fakestoreapi.com/products")
+        axios.get("http://panel.saadcoffee.ir/api/story?token=QSBiJF6Rk%26F5%262yLk1%qz^2*Up")
             .then((res) => {
                 setImageStory(res.data)
             })

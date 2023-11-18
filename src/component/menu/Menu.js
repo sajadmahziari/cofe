@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { AiOutlineHome, AiOutlineAlignRight, AiOutlineUser } from "react-icons/ai";
 import { BsCart3, BsFillPersonBadgeFill, BsPeopleFill } from "react-icons/bs";
+import { AiFillBook } from "react-icons/ai";
 const Menu = ({ onClickCat, closePopUpMenu }) => {
     return (
         <>
@@ -17,11 +18,16 @@ const Menu = ({ onClickCat, closePopUpMenu }) => {
                     <span className="txtNameMenu">دسته بندی</span>
                 </li>
                 <li onClick={closePopUpMenu}>
+                    <Link to="/menu">
+                        <AiFillBook />
+                        <span className="txtNameMenu">منو</span>
+                    </Link>
+                </li>
+                <li onClick={closePopUpMenu}>
                     <Link to="/order">
                         <BsCart3 />
                         <span className="txtNameMenu">سفارشات</span>
                     </Link>
-
                 </li>
                 <li onClick={closePopUpMenu}>
                     <Link to="/about">

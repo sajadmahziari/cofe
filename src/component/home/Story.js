@@ -13,7 +13,7 @@ const Story = ({imageStory}) => {
     }
     return (
         <>
-            {show&&<div><span className='popUp' onClick={closePopUp}></span><img className='centerCenter' src={`${story.image}`}/></div>}
+            {show&&<div><span className='popUp' onClick={closePopUp}></span><img className='centerCenter' src={`http://panel.saadcoffee.ir/img/Stories/${story.image}`}/></div>}
             <Swiper className='sliderStory'
                 spaceBetween={5}
                 slidesPerView={5}>
@@ -21,7 +21,7 @@ const Story = ({imageStory}) => {
                     imageStory.map((st, index) => {
                         return (
                             <SwiperSlide key={index} >
-                                <img className='storyImage' src={st.image} onClick={() => showStory(st)} />
+                                <img className='storyImage' src={`http://panel.saadcoffee.ir/img/Stories/${st.image}`} onClick={() => showStory(st)} />
                             </SwiperSlide>
                         )
                     })
