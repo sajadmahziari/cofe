@@ -328,7 +328,6 @@ svg {
     margin: 0;
     list-style: none;
     padding: 0;
-    height: 35%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -446,7 +445,7 @@ svg {
 
 .menu li {
     display: flex;
-    height: 50px;
+    min-height: 50px;
     border-bottom: 1px solid #ccc;
     align-items: center;
 }
@@ -471,7 +470,7 @@ svg {
 
 .centerCenter {
     position: fixed;
-    top: 25%;
+    top: 20%;
     right: 0;
     left: 0;
     margin: 0 auto;

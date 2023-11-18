@@ -3,17 +3,14 @@ import Categury from '../categury/Categury';
 import Products from '../categury/Products';
 import axios from 'axios';
 
-const CateguryList = ({ nameClass, colorTitle, closeCategury }) => {
-    // start get data categury main
-
-    // end get data categury main
-
+const CateguryList = ({ nameClass, colorTitle }) => {
     const [popUpProduct, setPopUpProduct] = useState(false);
     const [categury, setCategury] = useState([])
 
     const clickCategury = (id) => {
         setPopUpProduct(true);
-        closeCategury(id)
+        localStorage.setItem('id-categury',id )
+
     }
 
     useEffect(() => {
@@ -32,7 +29,7 @@ const CateguryList = ({ nameClass, colorTitle, closeCategury }) => {
                 </div>
                 <div className={`categury ${nameClass}`}>
                     {categury.map((cat) => {
-                        return <Categury key={cat.id} image={cat.image} title={cat.title} onClick={() => clickCategury(cat.id)} />
+                        return <Categury id={cat.id} key={cat.id} image={cat.image} title={cat.title} onClick={() => clickCategury(cat.id)} />
                     })}
                 </div>
             </div>

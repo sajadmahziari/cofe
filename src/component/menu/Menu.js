@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
-import { AiOutlineHome, AiOutlineAlignRight, AiFillAliwangwang } from "react-icons/ai";
+import { AiOutlineHome, AiOutlineAlignRight, AiOutlineUser } from "react-icons/ai";
 import { BsCart3, BsFillPersonBadgeFill, BsPeopleFill } from "react-icons/bs";
- const Menu = ( {onClickCat,closePopUpMenu}) => {
+const Menu = ({ onClickCat, closePopUpMenu }) => {
     return (
         <>
             <ul className="menu">
+
                 <li onClick={closePopUpMenu}>
                     <Link to="/">
                         <AiOutlineHome />
@@ -32,6 +33,12 @@ import { BsCart3, BsFillPersonBadgeFill, BsPeopleFill } from "react-icons/bs";
                     <Link to="/support">
                         <BsFillPersonBadgeFill />
                         <span className="txtNameMenu">پشتیبانی</span>
+                    </Link>
+                </li>
+                <li>
+                    <Link to="">
+                        <AiOutlineUser />
+                        <span className="txtNameMenu">پروفایل</span>
                     </Link>
                 </li>
             </ul>

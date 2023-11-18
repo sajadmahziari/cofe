@@ -35,7 +35,7 @@ const Index = () => {
         <>
             <Story imageStory={imageStory} />
             <MainSlider slider={slider} />
-            <CateguryList  />
+            <CateguryList/>
             {/* <Menubtn/> */}
             <SliderTwo sliderOffer={sliderOffer} />
         </>
